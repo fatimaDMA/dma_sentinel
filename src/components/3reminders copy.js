@@ -6,20 +6,25 @@ function SentinelReminders() {
 
 const [reminders, setReminders] = useState([]);
 
+
+
 useEffect(() => {
   const fetchReminders = async () => {
     try {
       // Lógica para obtener datos desde el backend
-      const response = await fetch('http://localhost:4060/s-get-reminders', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-          // Agrega cualquier otra cabecera necesaria aquí
-        },
-        // Puedes agregar un cuerpo si es necesario para tu solicitud POST
-        // body: JSON.stringify({ key: 'value' }),
-      });
+      fetch('http://localhost:4060/s-get-reminders', {
+  method: 'POST', // o cualquier otro método HTTP
+  mode: 'no-cors' // configuración para desactivar CORS
+})
+  .then(response => {
+    // aquí manejas la respuesta de la solicitud
+    console.log(response);
+  })
+  .catch(error => {
+    // manejo de errores
+    console.error('Error:', error);
+  });
+
 
       const data = await response.json();
 
@@ -36,7 +41,7 @@ useEffect(() => {
   fetchReminders();
 }, []); // Se ejecutará solo una vez al montar el componente
 
-
+/*
   return (
 
     <div >
@@ -75,7 +80,8 @@ const getBadgeVariant = (priority) => {
       return 'info';
     default:
       return 'primary';
-  }
+  }*/
 };
+
 
 export default SentinelReminders;

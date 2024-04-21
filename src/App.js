@@ -27,7 +27,7 @@ function App() {
           <SentinelCarousel></SentinelCarousel>
         </Col>
         <Col lg={4}>
-          <SentinelReminders></SentinelReminders>
+         <SentinelReminders></SentinelReminders>
         </Col>
       </Row>
       <div className="row-spacing" />
