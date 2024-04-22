@@ -1,7 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
-import {MARNChart, MARNData} from './MARNChart';
+import {MARNChart, MARNData} from './MARNReport';
 import DualChart from './WazeReport';
 import { Col, Row } from 'react-bootstrap';
+import { KazuAlquiler, KazuVenta} from './KazuReport';
 
 function SentinelCarousel() {
   
@@ -26,6 +27,17 @@ function SentinelCarousel() {
           <DualChart></DualChart>
           </div>
       </div>
+      </Carousel.Item>
+
+      <Carousel.Item interval={6000} className='item'>
+        <div className='code-container'>
+          <h4>Kazu Report</h4>
+          
+            <Row>
+            <Col lgmd={4} style={{ width: '200px', height: '200px', margin: '10px' }}> <KazuVenta></KazuVenta> </Col>
+            <Col lgmd={4} style={{ width: '200px', height: '200px', margin: '10px' }}> <KazuAlquiler></KazuAlquiler> </Col>
+            </Row>
+        </div>
       </Carousel.Item>
 
     </Carousel>

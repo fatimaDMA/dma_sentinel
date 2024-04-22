@@ -1,42 +1,7 @@
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { useState, useEffect } from 'react';
 
 function SentinelReminders() {
-
-const [reminders, setReminders] = useState([]);
-
-useEffect(() => {
-  const fetchReminders = async () => {
-    try {
-      // Lógica para obtener datos desde el backend
-      const response = await fetch('http://localhost:4060/s-get-reminders', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-          // Agrega cualquier otra cabecera necesaria aquí
-        },
-        // Puedes agregar un cuerpo si es necesario para tu solicitud POST
-        // body: JSON.stringify({ key: 'value' }),
-      });
-
-      const data = await response.json();
-
-      if (data.request_status === 'OK') {
-        setReminders(data.data);
-      } else {
-        console.error('Error en la solicitud al backend');
-      }
-    } catch (error) {
-      console.error('Error al obtener datos desde el backend:', error);
-    }
-  };
-
-  fetchReminders();
-}, []); // Se ejecutará solo una vez al montar el componente
-
-
   return (
 
     <div >
@@ -44,38 +9,39 @@ useEffect(() => {
 
     <ListGroup as="ol" numbered>
 
-    {reminders.map((reminder, index) => (
-          <ListGroup.Item
-            key={index}
-            as="li"
-            className="d-flex justify-content-between align-items-start"
-          >
-            <div className="ms-2 me-auto">
-              <div className="fw-bold">{reminder.name}</div>
-              <div>{reminder.date}</div>
-            </div>
-            <Badge bg={getBadgeVariant(reminder.priority)} pill>
-              {reminder.priority}
-            </Badge>
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start">
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Run scrappers</div>
+          <div>11/02/24</div>
+        </div>
+        <Badge bg="primary" pill>priority</Badge>
+      </ListGroup.Item>
+
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start">
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Sentinel Dev</div>
+          <div>09/02/24</div>
+        </div>
+        <Badge bg="warning" pill>next</Badge>
+      </ListGroup.Item>
+
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start">
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">New Proyect</div> 
+          <div>15/02/24</div>
+        </div>
+        <Badge bg="secondary" pill> pending</Badge>
+      </ListGroup.Item>
+
+    </ListGroup>
     </div>
   );
 }
-
-// Función auxiliar para obtener el color de Badge según la prioridad
-const getBadgeVariant = (priority) => {
-  switch (priority.toLowerCase()) {
-    case 'alta':
-      return 'danger';
-    case 'media':
-      return 'warning';
-    case 'baja':
-      return 'info';
-    default:
-      return 'primary';
-  }
-};
 
 export default SentinelReminders;

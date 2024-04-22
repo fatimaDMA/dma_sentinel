@@ -31,7 +31,6 @@
   left: 45%;
   transform: translatex(-45%);
 }
-
 .container .code-container {
   padding: 20px;
   background-color: white;
@@ -49,8 +48,12 @@ h4{
   font-weight: 200;
 }
 
+p{
+  -webkit-text-fill-color: #1c3672;
+}
+
 table{
-  font-size:large;
+  font-size:medium;
 }
 
 .d-flex{

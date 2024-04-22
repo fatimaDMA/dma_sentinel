@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto'
+import { color } from 'chart.js/helpers';
 
 export const TotalProductsChart = () => {
     const chartRef = useRef(null);
@@ -19,6 +20,7 @@ export const TotalProductsChart = () => {
               label: 'Total Productos',
               data: reportes,
               borderColor: '#7E57C2',
+              color: 'rgba(54, 162, 235, 0.5)',
               borderWidth: 2,
               fill: true,
             },

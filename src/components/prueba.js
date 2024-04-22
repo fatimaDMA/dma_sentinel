@@ -2,47 +2,34 @@ import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useState, useEffect } from 'react';
 
-function SentinelReminders() {
+function Prueba() {
 
 const [reminders, setReminders] = useState([]);
 
-
-
 useEffect(() => {
   const fetchReminders = async () => {
-    try {
-      // Lógica para obtener datos desde el backend
-      fetch('http://localhost:4060/s-get-reminders', {
-  method: 'POST', // o cualquier otro método HTTP
-  mode: 'no-cors' // configuración para desactivar CORS
-})
-  .then(response => {
-    // aquí manejas la respuesta de la solicitud
-    console.log(response);
-  })
-  .catch(error => {
-    // manejo de errores
-    console.error('Error:', error);
-  });
 
+      // Lógica para obtener datos desde el backend
+      const response = await fetch('https://cors-anywhere.herokuapp.com/http://localhost:4060/s-get-reminders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // Agrega cualquier otra cabecera necesaria aquí
+        },
+        // Puedes agregar un cuerpo si es necesario para tu solicitud POST
+        body: JSON.stringify({ key: 'value' }),
+      });
 
       const data = await response.json();
 
-      if (data.request_status === 'OK') {
-        setReminders(data.data);
-      } else {
-        console.error('Error en la solicitud al backend');
-      }
-    } catch (error) {
-      console.error('Error al obtener datos desde el backend:', error);
-    }
+      console.log(response.json())
+
   };
 
   fetchReminders();
 }, []); // Se ejecutará solo una vez al montar el componente
 
-/*
-  return (
+return (
 
     <div >
       <h4>Daily Reminders</h4>
@@ -80,8 +67,7 @@ const getBadgeVariant = (priority) => {
       return 'info';
     default:
       return 'primary';
-  }*/
+  }
 };
 
-
-export default SentinelReminders;
+export default Prueba;

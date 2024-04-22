@@ -8,7 +8,7 @@ function SentinelReports() {
     <Carousel>
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Statistics</h4>
+          <h4>Retail Statistics</h4>
           <p>Walmart</p>
           <Row xs={1}>          
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -19,7 +19,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Statistics</h4>
+          <h4>Retail Statistics</h4>
           <p>Calleja</p>
           <Row xs={1}>          
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -30,7 +30,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Statistics</h4>
+          <h4>Retail Statistics</h4>
           <p>Éxito</p>
           <Row xs={1}>
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -41,7 +41,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Statistics</h4>
+          <h4>Retail Statistics</h4>
           <p>Tiendas Metro</p>
           <Row xs={1}>
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -52,7 +52,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Statistics</h4>
+          <h4>Retail Statistics</h4>
           <p>Olímpica</p>
           <Row xs={1}>
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -63,7 +63,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Statistics</h4>
+          <h4>Retail Statistics</h4>
           <p>Tiendas D1</p>
           <Row xs={1}>
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
