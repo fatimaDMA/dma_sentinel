@@ -5,15 +5,14 @@ import DMAlogo from '../img/DMASentinel_logo.png';
 function SentinelNavBar() {
   return (
     <>
-      <Navbar className="navbar-nav navbar-center" fixed="top">
-        <Container>
+      <Navbar >
+        <Container >
           <Navbar.Brand>
             <img
               alt=""
               src= {DMAlogo}
-              width="195"
-              height="45"
-              className="d-inline-block align-top"
+              width="300"
+              height="70"
             />{' '}
           </Navbar.Brand>
         </Container>

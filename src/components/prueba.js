@@ -32,7 +32,6 @@ useEffect(() => {
 return (
 
     <div >
-      <h4>Daily Reminders</h4>
 
     <ListGroup as="ol" numbered>
 

@@ -5,10 +5,10 @@ import  { TotalProductsChart } from './ProductsChart'
 
 function SentinelReports() {
   return (
-    <Carousel>
+    <Carousel style={{ height: '50%' }}>
       <Carousel.Item interval={3000}>
-      <div className='code-container'>
-          <h4>Retail Statistics</h4>
+      <div className='code-container' >
+          <h5>Retail Statistics</h5>
           <p>Walmart</p>
           <Row xs={1}>          
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -19,9 +19,9 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Retail Statistics</h4>
+          <h5>Retail Statistics</h5>
           <p>Calleja</p>
-          <Row xs={1}>          
+          <Row xs={1} >          
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
           <Col md={6}> <TotalProductsChart></TotalProductsChart> </Col>
           </Row>
@@ -30,7 +30,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Retail Statistics</h4>
+          <h5>Retail Statistics</h5>
           <p>Éxito</p>
           <Row xs={1}>
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -41,7 +41,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Retail Statistics</h4>
+          <h5>Retail Statistics</h5>
           <p>Tiendas Metro</p>
           <Row xs={1}>
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -52,7 +52,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Retail Statistics</h4>
+          <h5>Retail Statistics</h5>
           <p>Olímpica</p>
           <Row xs={1}>
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>
@@ -63,7 +63,7 @@ function SentinelReports() {
 
       <Carousel.Item interval={3000}>
       <div className='code-container'>
-          <h4>Retail Statistics</h4>
+          <h5>Retail Statistics</h5>
           <p>Tiendas D1</p>
           <Row xs={1}>
           <Col md={6}> <TotalOfertasChart></TotalOfertasChart> </Col>

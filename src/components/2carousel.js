@@ -12,7 +12,6 @@ function SentinelCarousel() {
       <Carousel.Item interval={6000} className='item'>
         <div className='code-container'>
           <h4>MARN Report</h4>
-          
             <Row>
             <Col lgmd={6} style={{ width: '350px', height: '200px', margin: '10px' }}> <MARNChart></MARNChart> </Col>
             <Col md={4}> <MARNData></MARNData> </Col>
@@ -23,9 +22,11 @@ function SentinelCarousel() {
       <Carousel.Item interval={6000} className='item'>
       <div className='code-container'>
           <h4>Waze Report</h4>
-          <div style={{ width: '400px', height: '200px', margin: '20px' }}>
-          <DualChart></DualChart>
-          </div>
+          <Row>
+            <Col lgmd={8} style={{ width: '100px', height: '200px', margin: '10px' }}> <DualChart></DualChart> </Col>
+            <Col md={4}> </Col>
+            </Row>
+          
       </div>
       </Carousel.Item>
 

@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
-import  Card  from 'react-bootstrap/Card';
-import { CardGroup, Row, Col } from 'react-bootstrap';
-import Spacer from './spacer';
 
 export const KazuVenta = () => {
     const chartRef = useRef(null);
@@ -21,8 +18,8 @@ export const KazuVenta = () => {
             {
               label: 'Número de Reportes',
               data: reportes,
-              backgroundColor: 'rgba(75, 192, 192, 0.2)',
-              borderColor: '#2E7D32',
+              backgroundColor: 'rgba(226, 152, 36, 0.2)',
+              borderColor: 'rgba(226, 152, 36, 1)',
               borderWidth: 2,
             },
           ],
@@ -97,8 +94,8 @@ export const KazuAlquiler = () => {
           {
             label: 'Número de Reportes',
             data: reportes,
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: '#FF6384',
+            backgroundColor: 'rgba(78, 147, 111, 0.2)',
+            borderColor: 'rgba(78, 147, 111, 1)',
             borderWidth: 2,
           },
         ],

@@ -1,6 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
   background-color: FBF9F9;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -26,26 +32,56 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+row{
+  height: 40%;
+}
+
 .navbar-nav.navbar-center {
   position: absolute;
-  left: 45%;
+  left: 75%;
   transform: translatex(-45%);
+  top: 5%;
+  color: rgba(255, 255, 255, 0.822);
+  align-items: center;
 }
+
+.navbar{
+  position: absolute;
+  left: 75%;
+  transform: translatex(-45%);
+  top: 5%;
+  color: rgba(255, 255, 255, 0.822);
+  align-items: center;
+}
+
 .container .code-container {
-  padding: 20px;
   background-color: white;
-  border: 1px solid #d1d3e2;
+  border: 1% solid #d1d3e2;
   border-radius: 5px;
   -webkit-text-fill-color: black;
+  display: flex;
 }
 
 .item{
-  padding: 20px;
+  padding: 5%;
+}
+
+h5{
+  -webkit-text-fill-color: #2D55B4;
+  font-weight: 150;
+  font-size: small;
 }
 
 h4{
   -webkit-text-fill-color: #2D55B4;
-  font-weight: 200;
+  font-weight: 150;
+  font-size: small;
+}
+
+h2{
+  -webkit-text-fill-color: #2D55B4;
+  font-weight: 150;
+  font-size: small;
 }
 
 p{
@@ -53,7 +89,7 @@ p{
 }
 
 table{
-  font-size:medium;
+  font-size:14px
 }
 
 .d-flex{
@@ -62,6 +98,10 @@ table{
 
 .row-spacing {
   margin-bottom: 20px
+}
+
+.reminder {
+  font-size: smaller;
 }
 
 .textocard{

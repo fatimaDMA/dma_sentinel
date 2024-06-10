@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto'
-import { color } from 'chart.js/helpers';
 
 export const TotalProductsChart = () => {
     const chartRef = useRef(null);
