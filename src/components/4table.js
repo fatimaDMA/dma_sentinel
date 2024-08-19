@@ -14,7 +14,7 @@ function ScrappersReport({ data }) {
             <th>Last Running Date</th>
             <th>Next Running Date</th>            
             <th>Status</th>
-            <th>Request</th>            
+            <th>Observations</th>            
             <th>Execute Time</th>
           </tr>
         </thead>

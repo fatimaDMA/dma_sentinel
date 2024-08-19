@@ -10,7 +10,7 @@ from dateutil.relativedelta import relativedelta
 #-------------SET DE VARIABLES--------------------------
 
 date = str(datetime.datetime.now()).split(' ')[0]
-nextdate = (datetime.datetime.strptime(date, '%Y-%m-%d') + relativedelta(months=1)).strftime('%Y-%m-%d')
+nextdate = (datetime.datetime.strptime(date, '%Y-%m-%d') + relativedelta(days=15)).strftime('%Y-%m-%d')
 ScrapperStatus= [
     {
         "name": "name"
@@ -25,8 +25,6 @@ ScrapperStatus= [
         }
     }
 ]
-
-
 
 #------Función para enviar alerta de Telegram a Sentinel--------
 

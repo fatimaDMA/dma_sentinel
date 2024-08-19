@@ -31,7 +31,7 @@ const TimerComponent = () => {
           redirect: "follow"
         };
 
-        const response = await fetch("http://localhost:4060/s-get-status", requestOptions);
+        const response = await fetch("https://dma-api.onrender.com/s-get-status", requestOptions);
         const data = await response.json();
 
         if (data.request_status === 'OK') {
@@ -57,7 +57,7 @@ const TimerComponent = () => {
           redirect: "follow"
         };
 
-        const response = await fetch("http://localhost:4060/s-get-reminders", requestOptions);
+        const response = await fetch("https://dma-api.onrender.com/s-get-reminders", requestOptions);
         const data = await response.json();
 
         if (data.request_status === 'OK') {
@@ -88,11 +88,11 @@ const TimerComponent = () => {
     if (currentPage === 1) {
       timer = setTimeout(() => {
         setCurrentPage(2);
-      }, 2000); 
+      }, 30000); 
     } else {
       timer = setTimeout(() => {
         setCurrentPage(1);
-      }, 60000); 
+      }, 300000); 
     }
 
     return () => clearTimeout(timer);
@@ -108,18 +108,38 @@ const TimerComponent = () => {
 };
 
 const Page1 = () => {
-  return <div style={{ overflow: 'hidden', height: '100vh' }}>
-    
-    <ReactPlayer
+  return (
+    <div style={{
+      display: 'grid',
+      placeItems: 'center',
+      width: '100vw',
+      height: '100vh',
+      overflow: 'hidden',
+    }}>
+      <ReactPlayer
         url={Video}
         playing={true}
-        width={'100vw'}
-        height={'100vh'}
+        style={{ 
+          gridArea: '1 / 1 / 2 / 2',
+          minHeight: '100%',
+          minWidth: '100%',
+        }}
+        width="auto"
+        height="auto"
         loop={true}
         muted={true}
+        config={{
+          file: {
+            attributes: {
+              style: {
+                objectFit: 'cover'
+              }
+            }
+          }
+        }}
       />
-
-  </div>;
+    </div>
+  );
 };
 
 const Page2 = ({ scrappersData, remindersData }) => {

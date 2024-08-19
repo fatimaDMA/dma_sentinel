@@ -7,7 +7,7 @@ function SentinelReminders({ data = [] }) { // Asegurar que data tenga un valor 
   }
 
   return (
-    <div className='Reminder' style={{ width: '50%', textAlign: 'center' }}>
+    <div className='Reminder' style={{ width: '100%', textAlign: 'center' }}>
       <h5>Daily Reminders</h5>
       <ListGroup as="ol" numbered>
         {data.map((reminder, index) => (
