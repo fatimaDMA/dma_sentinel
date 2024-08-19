@@ -109,35 +109,26 @@ const TimerComponent = () => {
 
 const Page1 = () => {
   return (
-    <div style={{
-      display: 'grid',
-      placeItems: 'center',
-      width: '100vw',
-      height: '100vh',
-      overflow: 'hidden',
-    }}>
-      <ReactPlayer
-        url={Video}
-        playing={true}
-        style={{ 
-          gridArea: '1 / 1 / 2 / 2',
-          minHeight: '100%',
-          minWidth: '100%',
-        }}
-        width="auto"
-        height="auto"
-        loop={true}
-        muted={true}
-        config={{
-          file: {
-            attributes: {
-              style: {
-                objectFit: 'cover'
+    <div className="video-wrapper">
+      <div className="video-container">
+        <ReactPlayer
+          url={Video}
+          playing={true}
+          width="100%"
+          height="100%"
+          loop={true}
+          muted={true}
+          config={{
+            file: {
+              attributes: {
+                style: {
+                  objectFit: 'contain',
+                }
               }
             }
-          }
-        }}
-      />
+          }}
+        />
+      </div>
     </div>
   );
 };

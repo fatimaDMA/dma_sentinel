@@ -117,3 +117,21 @@ table{
     transform: rotate(360deg);
   }
 }
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Fondo negro para que se vea bien el video */
+
+  .video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000; /* Fondo negro para que se vea bien el video */
+  }
+}
