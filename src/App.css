@@ -62,7 +62,6 @@ row{
   border-radius: 5px;
   -webkit-text-fill-color: black;
   display: flex;
-  overflow: hidden;
 }
 
 .item{
