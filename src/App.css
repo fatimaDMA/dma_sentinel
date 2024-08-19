@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .App {
   text-align: center;
   background-color: FBF9F9;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -60,6 +62,7 @@ row{
   border-radius: 5px;
   -webkit-text-fill-color: black;
   display: flex;
+  overflow: hidden;
 }
 
 .item{
