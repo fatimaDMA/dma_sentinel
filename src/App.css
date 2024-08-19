@@ -125,6 +125,7 @@ table{
   width: 100vw;
   height: 100vh;
   background-color: #000; /* Fondo negro para que se vea bien el video */
+  overflow: hidden;
 
   .video-wrapper {
     display: flex;
